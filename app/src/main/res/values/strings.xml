@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Shopping Cart v2</string>
+    <string name="title_text">Shopping Cart</string>
+    <string name="add_btn_text">Add</string>
+    <string name="clear_btn_text">Clear</string>
+    <string name="find_btn_text">Find Shop</string>
 </resources>
