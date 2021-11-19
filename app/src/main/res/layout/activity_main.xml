@@ -46,6 +46,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_weight="1"
+            android:onClick="addItem"
             android:text="@string/add_btn_text" />
 
         <Button

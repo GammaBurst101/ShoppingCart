@@ -4,4 +4,8 @@
     <string name="add_btn_text">Add</string>
     <string name="clear_btn_text">Clear</string>
     <string name="find_btn_text">Find Shop</string>
+    <string name="itemNameHint">Item name</string>
+    <string name="quantityHint">Quantity</string>
+    <string name="addBtn2Text">Add Item</string>
+    <string name="addScreenTitleText">Add item to cart</string>
 </resources>
