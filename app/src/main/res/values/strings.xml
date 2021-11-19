@@ -1,11 +1,21 @@
 <resources>
+    <!-- Main Activity -->
     <string name="app_name">Shopping Cart v2</string>
     <string name="title_text">Shopping Cart</string>
     <string name="add_btn_text">Add</string>
     <string name="clear_btn_text">Clear</string>
     <string name="find_btn_text">Find Shop</string>
+
+    <!-- Add Item Activity -->
     <string name="itemNameHint">Item name</string>
     <string name="quantityHint">Quantity</string>
     <string name="addBtn2Text">Add Item</string>
     <string name="addScreenTitleText">Add item to cart</string>
+
+    <!-- Find Shop Activity -->
+    <string name="locationHint">Your location</string>
+    <string name="shopTypeHint">Shop Type</string>
+    <string name="findShopBtnText">Find shop</string>
+    <string name="findScreenTitleText">Find the required shop</string>
+
 </resources>
