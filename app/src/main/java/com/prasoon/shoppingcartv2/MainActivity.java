@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = result.getData();
                         Bundle extras = intent.getExtras();
                         String itemName = extras.getString(AddItem.ITEM_NAME_TAG);
-                        int quantity = extras.getInt(AddItem.QUANTITY_TAG);
+                        String quantity = extras.getString(AddItem.QUANTITY_TAG);
 
                         //Debug statement
-//                        Log.d("DEBUG", "\nReturned :- \n 1. Item name = "+extras.getString(AddItem.ITEM_NAME_TAG)+ " \n 2. Quantity = "+extras.getInt(AddItem.QUANTITY_TAG));
+//                        Log.d("DEBUG", "\nReturned :- \n 1. Item name = "+extras.getString(AddItem.ITEM_NAME_TAG)+ " \n 2. Quantity = "+extras.getString(AddItem.QUANTITY_TAG));
 
                         //Create a new text view to display the new item added
-                        if (!itemName.equals("") && quantity > 0) {
+                        if (!itemName.equals("") && !quantity.equals("")) {
                             TextView newItem = new TextView(getApplicationContext());
                             newItem.setText(itemName + " -> " + quantity);
                             newItem.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);

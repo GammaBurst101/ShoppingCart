@@ -26,13 +26,12 @@ public class AddItem extends AppCompatActivity {
 
     public void addItem(View view){
         //Get the item name and the quantity to be added to the list
-        String item = ""; //Default value
-        int quantity = -1; //Default value
+        String item = "", quantity = ""; //Default value
 
         //Try getting the name and quantity. If unsuccessful, print the error stack trace
         try {
             item = nameField.getText().toString();
-            quantity = Integer.parseInt(quantityField.getText().toString());
+            quantity = quantityField.getText().toString();
         } catch (Exception e){ //Should use a more specific exception, but I'm too lazy :P
             e.printStackTrace();
         }
@@ -43,7 +42,7 @@ public class AddItem extends AppCompatActivity {
         //Bundling all the data inside 'extras'
         Bundle extras = new Bundle();
         extras.putString(ITEM_NAME_TAG, item);
-        extras.putInt(QUANTITY_TAG, quantity);
+        extras.putString(QUANTITY_TAG, quantity);
 
         //Returning back to the main activity
         resultIntent.putExtras(extras);
