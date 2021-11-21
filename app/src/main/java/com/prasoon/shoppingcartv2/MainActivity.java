@@ -75,4 +75,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FindShop.class);
         startActivity(intent);
     }
+
+    /**
+     * Clears the shopping list if the 'clear' button is pressed
+     *
+     * @param view
+     */
+    public void clearScreen(View view){
+        listLayout.removeAllViews();
+    }
 }
