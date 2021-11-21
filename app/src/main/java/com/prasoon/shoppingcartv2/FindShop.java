@@ -27,7 +27,6 @@ public class FindShop extends AppCompatActivity {
     /**
      * Opens the phone's default maps app, to search for the nearest required shop
      *
-     * @param view
      */
     public void openMaps(View view){
         String userLoc = "", shop = "";

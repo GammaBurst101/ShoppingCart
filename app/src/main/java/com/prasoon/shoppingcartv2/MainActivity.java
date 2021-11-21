@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Starts the Add Item activity to let the user add any item to their shopping list
      *
-     * @param view
      */
     public void addItem(View view) {
         Intent intent = new Intent(this, AddItem.class);
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Starts the Find Shop activity to help the user find a suitable shop near their location
      *
-     * @param view
      */
     public void findShop(View view) {
         Intent intent = new Intent(this, FindShop.class);
@@ -79,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Clears the shopping list if the 'clear' button is pressed
      *
-     * @param view
      */
     public void clearScreen(View view){
         listLayout.removeAllViews();
