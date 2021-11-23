@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listLayout = findViewById(R.id.list);
+
+        //If something was saved then restore the list
+        if(savedInstanceState != null){
+            String[] items = savedInstanceState.getStringArray("saved");
+            for(int i=0; i<items.length; i++){
+                TextView tv = new TextView(getApplicationContext());
+                tv.setText(items[i]);
+                listLayout.addView(tv);
+            }
+        }
     }
 
     /**
@@ -80,5 +91,18 @@ public class MainActivity extends AppCompatActivity {
      */
     public void clearScreen(View view){
         listLayout.removeAllViews();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        //Get the list in a string array
+        String[] items = new String[listLayout.getChildCount()];
+        for(int i=0; i<items.length; i++)
+            items[i] = ((TextView)listLayout.getChildAt(i)).getText().toString();
+
+        //Save the string array
+        outState.putStringArray("saved", items);
     }
 }
